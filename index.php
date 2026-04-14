@@ -160,6 +160,62 @@ nav.mobile-nav.active{right:0;}
 .card{background:white;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.05);}
 .card h3{font-size:1.2rem;margin-bottom:10px;color:#6a0dad;}
 
+
+    /*------whatsapp----*/
+/* floating button */
+.wa-float-btn {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* chat box */
+.wa-body {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.wa-header {
+    background: #25D366;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wa-btn {
+    display: block;
+    margin-top: 10px;
+    background: #25D366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Animation */
+.wa-body, .wa-header {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
 /* --- Footer --- */
 footer{background:#6a0dad;color:white;text-align:center;padding:30px;margin-top:50px;}
 footer a{color:white;margin:0 5px;}
@@ -302,11 +358,7 @@ footer a:hover{text-decoration:underline;}
 
 <footer>
     <p>© 2026 Globmusk. All rights reserved.</p>
-    <p>
-       <a href="https://wa.me/23409166524854" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-    </p>
+    
 </footer>
 
 <script>
@@ -358,5 +410,29 @@ slidesWrapper.addEventListener('touchend', e => {
 // Initialize
 updateSlider();
 </script>
+
+    <div class="wa-widget">
+    <div class="wa-header">
+        <strong>Globmusk Support</strong>
+        <span onclick="toggleWA()" style="cursor:pointer;">✕</span>
+    </div>
+
+    <div class="wa-body">
+        <p>Hi 👋<br>How can we help you today?</p>
+
+        <a href="https://wa.me/2349166524854?text=Hi%20Globmusk%20team%2C%20I%20need%20help"
+           target="_blank"
+           class="wa-btn">
+            Start Chat on WhatsApp
+        </a>
+    </div>
+
+    <div class="wa-float-btn" onclick="toggleWA()">
+       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="white">
+    <path d="M19.11 17.47c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.57-1.47-1.84-.15-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26 0 1.33.98 2.61 1.12 2.79.14.18 1.91 2.92 4.63 4.1.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+    <path d="M16 3C8.83 3 3 8.83 3 16c0 2.3.6 4.55 1.74 6.53L3 29l6.7-1.7C11.5 28.4 13.72 29 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.5c-2.08 0-4.1-.56-5.86-1.62l-.42-.25-3.98 1.01 1.06-3.88-.27-.4A10.4 10.4 0 0 1 5.5 16C5.5 10.2 10.2 5.5 16 5.5S26.5 10.2 26.5 16 21.8 26.5 16 26.5z"/>
+</svg>
+    </div>
+</div>
 </body>
 </html>
