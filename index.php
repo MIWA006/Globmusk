@@ -303,9 +303,9 @@ footer a:hover{text-decoration:underline;}
 <footer>
     <p>© 2026 Globmusk. All rights reserved.</p>
     <p>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       <a href="https://wa.me/23409166524854" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
     </p>
 </footer>
 
